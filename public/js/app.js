@@ -20,7 +20,11 @@ weatherForm.addEventListener('submit', (e) => {
         messageOne.textContent = data.error;
       } else {
         messageOne.textContent = data.location;
-        messageTwo.textContent = `${data.forecast.description}, temperature: ${data.forecast.temperature}, feels like: ${data.forecast.feelslike}`;
+        messageTwo.textContent = `The weather today is ${data.forecast.description.toLowerCase()}, the temperature is ${
+          data.forecast.temperature
+        }, it feels like ${data.forecast.feelslike} and the UV index is ${
+          data.forecast.uvindex
+        }`;
       }
     });
   });
