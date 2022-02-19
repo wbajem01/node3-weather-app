@@ -24,21 +24,21 @@ app.use(express.static(publicDirectoryPath));
 app.get('', (req, res) => {
   res.render('index', {
     title: 'Weather',
-    name: 'Andrew Mead',
+    name: 'Wayne Bajema',
   });
 });
 
 app.get('/about', (req, res) => {
   res.render('about', {
     title: 'About Me',
-    name: 'Andrew Mead',
+    name: 'Wayne Bajema',
   });
 });
 
 app.get('/help', (req, res) => {
   res.render('help', {
     title: 'Help',
-    name: 'Andrew Mead',
+    name: 'Wayne Bajema',
     message: 'We are here to help!',
   });
 });
@@ -77,7 +77,7 @@ app.get('/help/*', (req, res) => {
   // matches anything after /help (that hasn't been matched ealier)
   res.render('404', {
     title: '404',
-    name: 'Andrew Mead',
+    name: 'Wayne Bajema',
     errorMessage: 'Help article not found',
   });
 });
@@ -85,7 +85,7 @@ app.get('/help/*', (req, res) => {
 app.get('*', (req, res) => {
   res.render('404', {
     title: '404',
-    name: 'Andrew Mead',
+    name: 'Wayne Bajema',
     errorMessage: 'Page not found',
   });
 });
